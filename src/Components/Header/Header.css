@@ -1,0 +1,11 @@
+header{
+    display: flex;
+}
+
+img{
+    width: 50px;
+}
+
+a{
+    margin: 10px;
+}

@@ -4,3 +4,15 @@ Componentes Funcionales
 -El nombre de la funcion si o si tiene que empezar con mayuscula SIEMPRE
 -La funcion debe retornar algo (siempre debe retornar un solo elemento)
 -Se debe exportar la funcion 
+
+
+Componentes
+-Props
+-States
+-Ciclo de vida 
+-Metodos del ciclo de vida
+
+Hooks 
+-Siempre comienzan con use
+-Siempre se declaran dentr de un Componente
+-No se pueden declarar en condicionales(if)

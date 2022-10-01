@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css"
-import Header from "./Components/Header/Header"
+import Navbar from "./Components/Navbar/Navbar"
+import ItemListContainer from "./Containers/ItemListContainer/ItemListContainer";
 
 const App = () => {
+  const greeting = <h2>Bienvenido a MotoRep</h2>
   return (
     <>
-      <Header/>
+      <Navbar/>
+      <ItemListContainer greeting={greeting} />
     </>
   )
 }

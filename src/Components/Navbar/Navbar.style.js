@@ -15,7 +15,7 @@ export const styles = {
     },
     nav:{
         gridArea: "navbar",
-        display: viewport.width > 900 ? "flex" : "none",
+        //display: viewport.width > 900 ? "flex" : "none",
         justifyContent: "center",
     },
     navUl:{
@@ -30,6 +30,7 @@ export const styles = {
     anchors:{
         textDecoration: "none",
         color: "black",
+        marginLeft: 10,
     },
     divCarrito:{
         gridArea: "carrito",

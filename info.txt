@@ -16,3 +16,37 @@ Hooks
 -Siempre comienzan con use
 -Siempre se declaran dentr de un Componente
 -No se pueden declarar en condicionales(if)
+
+Ciclo de vida de Componentes y Metodos
+
+-Montaje(Mount)
+    -constructor
+    -render
+    -componentDidMount
+
+-Actualización(Update)
+    -constructor
+    -render
+    -componentDidUpdate
+
+-Desmontaje (Unmount)
+    -componentWillUnmount
+
+useEffect
+
+Con esta config el useEffect se ejecuta solo en el Montaje
+useEffect(()=>{
+    //bloque de codigo
+}, [])
+
+Con esta config el useEffect se ejecuta solo en el montaje y cuando detecta cambios en valores del array de dependencia
+useEffect(()=>{
+    //bloque de codigo
+},[valores])
+
+Con esta config el useEffect se ejecuta solo en el Montaje y Actualizaciónes
+useEffect(()=>{
+    //bloque de codigo
+})[]
+
+

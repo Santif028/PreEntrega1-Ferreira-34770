@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Context } from "../../Context/Context";
 
-const CartWidget = () => {
+const Cartwidget = () => {
   const { qty } = useContext(Context);
   return (
     <>
@@ -12,4 +12,4 @@ const CartWidget = () => {
   );
 };
 
-export default CartWidget
+export default Cartwidget

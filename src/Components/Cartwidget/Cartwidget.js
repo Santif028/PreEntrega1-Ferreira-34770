@@ -6,8 +6,8 @@ const Cartwidget = () => {
   const { qty } = useContext(Context);
   return (
     <>
-      <p>{qty}</p>
-      <ShoppingCartIcon color="primary" fontSize="large" />
+      <p style={{alignSelf: "center"}}>{qty}</p>
+      <ShoppingCartIcon fontSize="large" />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./ItemListContainer.css"
+import { styles } from "./ItemListContainer.style";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
@@ -11,29 +11,34 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    const productCollection = collection(dataBase, "productos");
-    const q = query(productCollection, where("category", "==", id))
-    getDocs(id !== undefined ? q : productCollection )
-      .then((result) => {
-        const productList = result.docs.map((item) => {
-          return {
-            ...item.data(),
-            id: item.id,
-          }
-        })
-        setProducts(productList);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(setLoading(false))
+  useEffect(() => { 
+    const getData = async () => {
+      const queryRef = !id
+        ? collection(dataBase, "productos")
+        : query(
+          collection(dataBase, "productos"),
+          where("category", "==", id)
+        );
+      const response = await getDocs(queryRef);
+      const productos = response.docs.map((doc) => {
+        const newProduct = {
+          ...doc.data(),
+          id: doc.id,
+        };
+        return newProduct;
+      });
+      setTimeout(() => {
+        setProducts(productos);
+        setLoading(false)
+      },)
+    }; 
+    getData();
   }, [id]);
 
   return (
-    <>
-      <h1>{greeting}</h1>
+    <div style={{height: id === undefined ? "none" : "100vh"}}>
+      <h1 style={styles.h1}>{greeting}</h1>
       {<>{loading ? <h1>Aguarde un momento...</h1> : <ItemList products={products} />}</>}
-    </>
+    </div>
   );
 };

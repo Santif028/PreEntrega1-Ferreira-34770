@@ -1,36 +1,27 @@
-const viewport = {
-    width: document.documentElement.clientWidth,
-    height: document.documentElement.clientHeight
-  }
-
 export const styles = {
     header: {
         display: "grid",
         gridTemplateAreas: `"titulo navbar carrito"`,
-        backgroundColor: "#D92414",
+        backgroundColor: "rgb(66, 153, 225)",
         alignItems: "center",
     },
     h1:{
         gridArea: "titulo",
+        fontSize: "2.5rem",
+        textAlign: "center",
     },
     nav:{
-        gridArea: "navbar",
-        //display: viewport.width > 900 ? "flex" : "none",
-        justifyContent: "center",
-    },
-    navUl:{
-        listStyle: "none",
         display: "flex",
-        margin: 20,
-        gap: 10,
-    },
-    navUlLi:{
-        fontSize: 13,
+        gridArea: "navbar",
+        justifyContent: "center",
+        textAlign: "center",
+        gap: 20
     },
     anchors:{
         textDecoration: "none",
         color: "black",
-        marginLeft: 10,
+        fontWeight: 600,
+        fontSize: "1.2rem",
     },
     divCarrito:{
         gridArea: "carrito",

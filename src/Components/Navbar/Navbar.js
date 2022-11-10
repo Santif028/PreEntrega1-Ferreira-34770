@@ -1,4 +1,3 @@
-import { style } from "@mui/system";
 import React from "react";
 import Cartwidget from "../Cartwidget/CartWidget";
 import {styles} from "./Navbar.style"
@@ -7,10 +6,10 @@ import {Link, NavLink} from "react-router-dom";
 
 const Navbar = () =>{
     const categorias = [
-        { nombre: "electronics", id: 0, ruta: "/categoria/electronics" },
-        { nombre: "jewelery", id: 1, ruta: "/categoria/jewelery" },
-        { nombre: "men's clothing", id: 2, ruta: "/categoria/men's clothing" },
-        { nombre: "women's clothing", id: 3, ruta: "/categoria/women's clothing" },
+        { nombre: "Tecnología", id: 0, ruta: "/categoria/electronics" },
+        { nombre: "Joyeria", id: 1, ruta: "/categoria/jewelery" },
+        { nombre: "Ropa de hombre", id: 2, ruta: "/categoria/men's clothing" },
+        { nombre: "Ropa de mujer", id: 3, ruta: "/categoria/women's clothing" },
       ];
     return (
         <header style={styles.header}>

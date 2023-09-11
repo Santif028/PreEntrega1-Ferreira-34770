@@ -3,7 +3,6 @@ import Cartwidget from "../Cartwidget/Cartwidget";
 import {styles} from "./Navbar.style"
 import {Link, NavLink} from "react-router-dom";
 
-
 const Navbar = () =>{
     const categorias = [
         { nombre: "Tecnología", id: 0, ruta: "/categoria/electronics" },

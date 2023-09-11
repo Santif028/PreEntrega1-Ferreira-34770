@@ -32,7 +32,6 @@ export const Cart = () => {
     setEmail2(e.target.value)
   }
 
-
   const comprador = {
     nombre: nombre,
     apellido: apellido,
@@ -84,7 +83,6 @@ export const Cart = () => {
   const borrarCarrito = () => {
     clear()
   }
-
 
   return (
     <div style={styles.divCart}>

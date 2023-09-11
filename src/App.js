@@ -8,7 +8,6 @@ import {Cart}  from "./Containers/CartView/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomProvider } from "./Context/Context";
 
-
 const App = () => {
   const greeting = "Bienvenido a MotoRep";
   return (
@@ -31,4 +30,3 @@ const App = () => {
 }
 
 export default App
-

@@ -36,7 +36,7 @@ export const ItemListContainer = ({ greeting }) => {
   }, [id]);
 
   return (
-    <div style={{height: id === undefined ? "none" : "100vh"}}>
+    <div>
       <h1 style={styles.h1}>{greeting}</h1>
       {<>{loading ? <h1>Aguarde un momento...</h1> : <ItemList products={products} />}</>}
     </div>

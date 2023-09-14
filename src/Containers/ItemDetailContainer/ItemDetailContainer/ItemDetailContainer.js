@@ -29,7 +29,7 @@ export const ItemDetailContainer = ({ greeting }) => {
   }, [id]);
 
   return (
-    <div style={{height: "100vh"}}>
+    <div>
       <h1>{greeting}</h1>
       {<>{loading ? <h1>Aguarde un momento...</h1> : <ItemDetail product={product} style={styles.itemListDiv}/>}</>}
     </div>
